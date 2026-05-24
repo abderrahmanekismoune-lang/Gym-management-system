@@ -76,4 +76,4 @@ GymManagementSystem/
 
 ## Built By
 
-UC2 Constantine — Génie Logiciel / SCI Project
+UC2 Constantine — SCI : Science de L'informatique
