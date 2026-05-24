@@ -1,0 +1,476 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0e1628;
+            color: #f1f5ff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+    
+        header {
+            background-color: #080e1c;
+            padding: 18px 40px;
+            border-bottom: 1px solid #1e3060;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 26px;
+            letter-spacing: 0.1em;
+            color: #f1f5ff;
+
+        }
+
+        .logo span { color: #fbbf24; }
+
+        nav ul { list-style: none; 
+           
+        
+        }
+
+        nav  a {
+            
+            color: #8898b8;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.2s;
+            display: inline-block;
+            
+            
+        }
+
+        nav a:hover { color: #fbbf24; }
+
+        
+        .hero {
+            background-color: #111e38;
+            padding: 60px 40px 48px;
+            border-bottom: 3px solid #fbbf24;
+        }
+
+        .hero small {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 80px;
+            line-height: 1;
+            color: #f1f5ff;
+        }
+
+        .hero h1 span { color: #A368E6; }
+
+        .hero p {
+            color: #8898b8;
+            margin-top: 14px;
+            max-width: 600px;
+            font-size: 16px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #1e3060;
+            margin: 0;
+        }
+
+    
+        .page {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 56px 24px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        
+        .plans {
+            display: flex;
+            gap: 24px;
+        }
+
+    
+        .plan-card {
+            flex: 1;
+            background-color: #152038;
+            border: 1px solid #1e3060;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .plan-card:hover {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+       
+        .plan-card.bronze { border-top: 3px solid #cd7f32; }
+        .plan-card.silver { border-top: 3px solid #a8a9ad; }
+        .plan-card.gold   { border-top: 3px solid #fbbf24; }
+
+              .plan-card.recommended {
+            border: 2px solid #fbbf24;
+            transform: scale(1.03);
+            position: relative;
+        }
+
+        .rec-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fbbf24;
+            color: #0e1628;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            padding: 3px 16px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        .plan-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            background-color: #1a2845;
+        }
+
+        .plan-body {
+            padding: 24px;
+        }
+
+        .plan-body h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+
+        .plan-card.bronze h3 { color: #cd7f32; }
+        .plan-card.silver h3 { color: #a8a9ad; }
+        .plan-card.gold   h3 { color: #fbbf24; }
+
+        .plan-price {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            color: #f1f5ff;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .plan-price span {
+            font-size: 14px;
+            color: #8898b8;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+        }
+
+        dl { margin-top: 4px; }
+
+        dt {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #8898b8;
+            margin-bottom: 10px;
+        }
+
+        dd {
+            font-size: 14px;
+            color: #8898b8;
+            padding: 8px 0;
+            border-bottom: 1px solid #1a2540;
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        dd::before {
+            content: '✓';
+            color: #fbbf24;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        dd:last-child { border-bottom: none; }
+
+       
+        .form-section {
+            background-color: #152038;
+            border: 1px solid #1e3060;
+            border-top: 3px solid #fbbf24;
+            border-radius: 14px;
+            padding: 36px;
+        }
+
+        .form-section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            letter-spacing: 0.07em;
+            color: #f1f5ff;
+            margin-bottom: 28px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        fieldset {
+            border: 1px solid #1e3060;
+            border-radius: 10px;
+            padding: 24px;
+        }
+
+        legend {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            color: #fbbf24;
+            padding: 0 10px;
+        }
+
+        label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #8898b8;
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"] {
+            background-color: #1a2845;
+            border: 1.5px solid #1e3060;
+            border-radius: 8px;
+            color: #f1f5ff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            padding: 11px 15px;
+            outline: none;
+            width: 100%;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus {
+            border-color: #A368E6;
+            box-shadow: 0 0 0 3px rgba(163, 104, 230, 0.2);
+        }
+
+        textarea {
+            background-color: #1a2845;
+            border: 1.5px solid #1e3060;
+            border-radius: 8px;
+            color: #f1f5ff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            padding: 11px 15px;
+            outline: none;
+            width: 100%;
+            resize: vertical;
+            min-height: 100px;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        textarea:focus {
+            border-color: #A368E6;
+            box-shadow: 0 0 0 3px rgba(163, 104, 230, 0.2);
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.5);
+        }
+
+               .radio-group {
+            display: flex;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .radio-option {
+            flex: 1;
+            background-color: #1a2845;
+            border: 1.5px solid #1e3060;
+            border-radius: 8px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .radio-option:has(input:checked) {
+            border-color: #fbbf24;
+            background-color: rgba(251, 191, 36, 0.06);
+        }
+
+        .radio-option input[type="radio"] {
+            accent-color: #fbbf24;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .radio-option label {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: 0;
+            color: #f1f5ff;
+            margin: 0;
+            cursor: pointer;
+        }
+
+       
+        .checkbox-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #fbbf24;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .checkbox-row label {
+            font-size: 14px;
+            color: #8898b8;
+            text-transform: none;
+            letter-spacing: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .checkbox-row a {
+            color: #A368E6;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .checkbox-row a:hover { color: #fbbf24; }
+
+        
+        button[type="submit"] {
+            display: none;
+            width: 100%;
+            padding: 14px;
+            background-color: #fbbf24;
+            color: #0e1628;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #fde68a;
+            transform: translateY(-2px);
+        }
+
+        
+        .payment {
+            background-color: #152038;
+            border: 1px solid #1e3060;
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .payment h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            letter-spacing: 0.08em;
+            color: #fbbf24;
+            margin-bottom: 16px;
+        }
+
+        .payment ul {
+            list-style: none;
+            display: flex;
+            gap: 12px;
+        }
+
+        .payment ul li {
+            background-color: #1a2845;
+            border: 1px solid #1e3060;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #f1f5ff;
+        }w
+
+        
+        footer {
+            background-color: #080e1c;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #8898b8;
+            border-top: 1px solid #1e3060;
+        }
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            color: white;
+            font-weight: 800;
+            cursor: pointer;
+            letter-spacing: 0.1em;
+            transition: transform 0.3s ease;
+           
+            
+            
+        }
+        form span{
+            color: red;
+            font-size: 13px;
+            
+        }
+        form i {
+            color:green
+        }
+ #error-submit{
+    
+  color: red;
+  margin: 0 auto;
+
+    
+
+}

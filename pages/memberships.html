@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quantum Motion — Memberships</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/memberships.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div>
+                <a class="logo" href="../index.html">Quantum <span>Motion</span></a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="../index.html">🏠 Home</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <small>Choose your plan</small>
+        <h1>Member<span>ships</span></h1>
+        <p>At Quantum Motion, we believe fitness should be accessible to everyone. Three flexible tiers — pick the plan that fits your goals, and upgrade anytime as your journey evolves.</p>
+    </div>
+
+    <hr>
+
+    <div class="page">
+        <div class="plans">
+            <div class="plan-card bronze">
+                <img src="../assets/images/sad-guy.jpg" alt="Bronze sub" class="plan-img">
+                <div class="plan-body">
+                    <h3>Bronze</h3>
+                    <div class="plan-price">$10 <span>/ month</span></div>
+                    <dl>
+                        <dt>Includes:</dt>
+                        <dd>Full Usage of Machines</dd>
+                        <dd>Locker Rooms</dd>
+                        <dd>Private Shower Areas</dd>
+                        <dd>Access to Public Events</dd>
+                        <dd>Free Advice</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="plan-card silver recommended">
+                <div class="rec-badge">⭐ Most Popular</div>
+                <img src="../assets/images/medium-guy.jpg" alt="Silver sub" class="plan-img">
+                <div class="plan-body">
+                    <h3>Silver</h3>
+                    <div class="plan-price">$30 <span>/ quarter</span></div>
+                    <dl>
+                        <dt>Includes:</dt>
+                        <dd>V.I.P Room</dd>
+                        <dd>Free Water</dd>
+                        <dd>Access to Juice Bar</dd>
+                        <dd>Access to Saunas</dd>
+                        <dd>Private Locker Room</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="plan-card gold">
+                <img src="../assets/images/happy-guy.jpg" alt="Gold sub" class="plan-img">
+                <div class="plan-body">
+                    <h3>Gold</h3>
+                    <div class="plan-price">$100 <span>/ year</span></div>
+                    <dl>
+                        <dt>Includes:</dt>
+                        <dd>Free Protein Shakes</dd>
+                        <dd>Access to Private Events</dd>
+                        <dd>Free Trainer</dd>
+                        <dd>Gym Access 24/7</dd>
+                        <dd>Free Juices</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Sign Up Now</h2>
+            <form>
+                <fieldset>
+                    <legend>Your Info</legend>
+                    <label for="contact-name">Name:</label>
+                    <input onkeyup="validateName()" name="name" id="contact-name" type="text" placeholder="Your full name">
+                    <span id="nameError"></span>
+
+                    <label for="contact-email">E-mail:</label>
+                    <input onkeyup="validateEmail()" name="email" id="contact-email" type="email" placeholder="you@example.com">
+                    <span id="emailError"></span>
+
+                    <label for="contact-phone">Phone Number:</label>
+                    <input onkeyup="validatePhone()" name="phone" id="contact-phone" type="tel" placeholder="0789 78 97 89">
+                    <span id="phoneError"></span>
+
+                    <label for="contact-date">Date of Birth:</label>
+                    <input onchange="validateDate()" name="dateofbirth" id="contact-date" type="date">
+                    <span id="dateError"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Selection</legend>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input onclick="getPlane()" name="planselec" id="bronze" type="radio" value="bronze">
+                            <label for="bronze">🥉 Bronze — $10/mo</label>
+                        </div>
+                        <div class="radio-option">
+                            <input onclick="getPlane()" name="planselec" id="silver" type="radio" value="silver">
+                            <label for="silver">🥈 Silver — $30/qtr</label>
+                        </div>
+                        <div class="radio-option">
+                            <input onclick="getPlane()" name="planselec" id="gold" type="radio" value="gold">
+                            <label for="gold">🥇 Gold — $100/yr</label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-row">
+                        <input onclick="getPlane()" name="termsandconditions" id="conditions" type="checkbox">
+                        <label for="conditions">I accept the <a href="#" target="_blank">Terms and Conditions</a></label>
+                    </div>
+
+                    <label for="notes" style="margin-top:20px">Additional Notes (optional):</label>
+                    <textarea id="notes" name="notes" placeholder="Any special requests or health conditions we should know about..."></textarea>
+                </fieldset>
+
+                <button id="submit" onclick="return validateSubmit()" type="submit">Submit!</button>
+                <span id="error-submit"></span>
+            </form>
+        </div>
+
+        <div class="payment">
+            <h3>Payment Methods</h3>
+            <ul>
+                <li>💳 PayPal</li>
+                <li>💳 Visa</li>
+                <li>💳 Baridi Mob</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>© 2025 Quantum Motion. All rights reserved.</footer>
+    <script src="../js/memberships.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quantum Motion — Trainers</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/trainers.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a class="logo" href="../index.html">Quantum <span>Motion</span></a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="../index.html">🏠 Home</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="memberships.html">Memberships</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <small>Meet the team</small>
+        <h1>Our <span>Trainers</span></h1>
+        <p>World-class coaches dedicated to pushing you beyond your limits.</p>
+    </div>
+
+    <div class="page">
+        <input type="text" oninput="SearchTriners()" id="searchInput" placeholder="Search trainers...">
+        <p id="noResult" style="display:none;">No trainers found.</p>
+
+        <div class="trainer-card" data-name="Ahmed Mansour" onclick="openModal('Ahmed Mansour')">
+            <div class="trainer-left">
+                <figure>
+                    <img src="../assets/images/ahmed-mansour.jpg" alt="Ahmed Mansour">
+                    <figcaption>
+                        <strong>Ahmed Mansour 🏋️</strong>
+                        Strength & Conditioning — 8 yrs
+                    </figcaption>
+                </figure>
+                <address>
+                    📧 <a href="mailto:ahmed.mansour@xgym.com" onclick="event.stopPropagation()">ahmed.mansour@xgym.com</a>
+                    📞 <a href="tel:0789789789" onclick="event.stopPropagation()">0789 78 97 89</a>
+                </address>
+            </div>
+            <div class="trainer-right">
+                <p>Ahmed is a former national powerlifting champion who specializes in strength training and competition prep. He's helped over 100 clients break personal records and build sustainable strength.</p>
+                <div class="reviews-title">Reviews</div>
+                <blockquote>
+                    <h4>💬 "Pushed me to new limits"</h4>
+                    <p>"Ahmed got me competition-ready in just 4 months. My deadlift went from 100kg to 160kg!"</p>
+                    <footer>— Karim B.</footer>
+                </blockquote>
+                <blockquote>
+                    <h4>💬 "Form perfectionist"</h4>
+                    <p>"He fixed my squat form in one session. No more knee pain!"</p>
+                    <footer>— Samira H.</footer>
+                </blockquote>
+                <blockquote>
+                    <h4>💬 "Knows his stuff"</h4>
+                    <p>"Best strength coach I've ever worked with. Explains the science behind every lift."</p>
+                    <footer>— Youssef L.</footer>
+                </blockquote>
+                <p class="modal-hint">👆 Click card to see full details</p>
+            </div>
+        </div>
+
+        <div class="trainer-card" data-name="Layla Hassan" onclick="openModal('Layla Hassan')">
+            <div class="trainer-left">
+                <figure>
+                    <img src="../assets/images/layla-hassan.jpg" alt="Layla Hassan">
+                    <figcaption>
+                        <strong>Layla Hassan 🧘‍♀️</strong>
+                        Yoga & Pilates — 6 yrs
+                    </figcaption>
+                </figure>
+                <address>
+                    📧 <a href="mailto:layla.hassan@xgym.com" onclick="event.stopPropagation()">layla.hassan@xgym.com</a>
+                    📞 <a href="tel:0551234567" onclick="event.stopPropagation()">0551 23 45 67</a>
+                </address>
+            </div>
+            <div class="trainer-right">
+                <p>Layla is a certified yoga instructor with a focus on mobility, injury recovery, and mindfulness. Her classes are known for being calming yet challenging, suitable for all levels.</p>
+                <div class="reviews-title">Reviews</div>
+                <blockquote>
+                    <h4>💬 "Life-changing"</h4>
+                    <p>"Layla helped me recover from chronic back pain. I can finally move freely again."</p>
+                    <footer>— Mariam K.</footer>
+                </blockquote>
+                <blockquote>
+                    <h4>💬 "Calm but strong"</h4>
+                    <p>"Her sessions are peaceful but you feel the burn. Perfect balance."</p>
+                    <footer>— Nour A.</footer>
+                </blockquote>
+                <blockquote>
+                    <h4>💬 "Patient and kind"</h4>
+                    <p>"As a beginner, I was nervous. Layla made me feel so welcome."</p>
+                    <footer>— Fatima Z.</footer>
+                </blockquote>
+                <p class="modal-hint">👆 Click card to see full details</p>
+            </div>
+        </div>
+
+        <div class="trainer-card" data-name="Karim Boudiaf" onclick="openModal('Karim Boudiaf')">
+            <div class="trainer-left">
+                <figure>
+                    <img src="../assets/images/karim-boudiaf.jpg" alt="Karim Boudiaf">
+                    <figcaption>
+                        <strong>Karim Boudiaf 🥊</strong>
+                        MMA & Boxing — 10 yrs
+                    </figcaption>
+                </figure>
+                <address>
+                    📧 <a href="mailto:karim.boudiaf@xgym.com" onclick="event.stopPropagation()">karim.boudiaf@xgym.com</a>
+                    📞 <a href="tel:0552345678" onclick="event.stopPropagation()">0552 34 56 78</a>
+                </address>
+            </div>
+            <div class="trainer-right">
+                <p>Karim is a former national boxing champion with a decade of coaching experience. He specializes in technique, conditioning, and self-defense, pushing clients to be their best.</p>
+                <div class="reviews-title">Reviews</div>
+                <blockquote>
+                    <h4>💬 "Tough but fair"</h4>
+                    <p>"Karim doesn't go easy on you — and that's why you get results fast."</p>
+                    <footer>— Omar R.</footer>
+                </blockquote>
+                <blockquote>
+                    <h4>💬 "Real technique"</h4>
+                    <p>"Learned proper boxing form, not just fitness. Feel like a real fighter."</p>
+                    <footer>— Hicham M.</footer>
+                </blockquote>
+                <blockquote>
+                    <h4>💬 "Best decision I made"</h4>
+                    <p>"Lost 15kg and gained confidence. Karim is the best in the city."</p>
+                    <footer>— Samir T.</footer>
+                </blockquote>
+                <p class="modal-hint">👆 Click card to see full details</p>
+            </div>
+        </div>
+
+        <div class="join-card">
+            <h3>Think You Have What It Takes to <span>Shine</span> With Our Crew?</h3>
+            <p>We're always looking for passionate, certified trainers who want to make a difference.</p>
+            <a href="contact.html">Contact Us Now!</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">© 2025 Quantum Motion. All rights reserved.</footer>
+    <script src="../js/trainers.js"></script>
+</body>
+</html>

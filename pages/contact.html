@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/contact.css" />
+  <title>Contact – Quantum Motion</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="nav-brand"><a href="../index.html">Quantum<span>Motion</span></a></div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="memberships.html">Membership</a></li>
+        <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80" alt="Gym contact" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="page-hero-content">
+        <h1>Contact <span>Us</span></h1>
+        <p>Have a question? We'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-inner">
+        <div class="form-box">
+          <h2>Send Us a Message</h2>
+          <form onsubmit="return validateContact()">
+            <label for="c-name">Name:</label>
+            <input type="text" id="c-name" placeholder="Your full name" onkeyup="validateName()">
+            <span id="nameError" class="err"></span>
+
+            <label for="c-email">Email:</label>
+            <input type="email" id="c-email" placeholder="you@example.com" onkeyup="validateEmail()">
+            <span id="emailError" class="err"></span>
+
+            <label for="c-subject">Subject:</label>
+            <input type="text" id="c-subject" placeholder="What is this about?" onkeyup="validateSubject()">
+            <span id="subjectError" class="err"></span>
+
+            <label for="c-message">Message:</label>
+            <textarea id="c-message" placeholder="Write your message here... (minimum 20 characters)" oninput="validateMessage()"></textarea>
+            <div class="char-count">
+              <span id="char-count">0</span> characters
+              <span id="char-min"> — need at least 20</span>
+            </div>
+            <span id="messageError" class="err"></span>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="info-box">
+          <h2>Find Us</h2>
+          <address>
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <p>123 rue Selami Selimane<br>Constantine, Algeria</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:0789789789">0789 78 97 89</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📧</span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:info@quantummotion.com">info@quantummotion.com</a></p>
+              </div>
+            </div>
+          </address>
+
+          <h2 style="margin-top: 32px;">Opening Hours</h2>
+          <table class="hours-table">
+            <thead>
+              <tr><th>Day</th><th>Hours</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Saturday – Thursday</td><td>6:00 AM – 11:00 PM</td></tr>
+              <tr><td>Friday</td><td>Closed</td></tr>
+              <tr><td>Public Holidays</td><td>9:00 AM – 6:00 PM</td></tr>
+            </tbody>
+          </table>
+          <div class="map-placeholder">🗺️ Map coming soon</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast">
+    <i class="fa-solid fa-circle-check"></i> Message sent successfully!
+  </div>
+
+  <footer>
+    <section class="footer-col">
+      <h4>Contact Us</h4>
+      <address>
+        <p>123 rue Selami Selimane<br>Constantine, Algeria</p>
+        <p>Phone: <a href="tel:0789789789">0789 78 97 89</a></p>
+        <p>Email: <a href="mailto:info@quantummotion.com">info@quantummotion.com</a></p>
+      </address>
+    </section>
+    <section class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Twitter / X</a></li>
+      </ul>
+    </section>
+    <section class="footer-col">
+      <h4>Opening Hours</h4>
+      <ul>
+        <li>Saturday – Thursday: 6:00 AM – 11:00 PM</li>
+        <li>Friday: Closed</li>
+        <li>Public Holidays: 9:00 AM – 6:00 PM</li>
+      </ul>
+    </section>
+    <p class="footer-copy"><small>&copy; 2025 Quantum Motion. All rights reserved.</small></p>
+  </footer>
+
+  <script src="../js/contact.js"></script>
+</body>
+</html>

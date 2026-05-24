@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quantum Motion — Admin Login</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/admin-login.css">
+</head>
+<body>
+
+    <h1>QUANTUM <span>MOTION</span></h1>
+    <p class="subtitle">Admin Access Only</p>
+    <hr>
+
+    <form onsubmit="return validateLogin()">
+        <fieldset>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" placeholder="Username" onkeyup="clearError()">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password" onkeyup="clearError()">
+
+            <button type="submit">Log In</button>
+        </fieldset>
+    </form>
+
+    <div class="error-message" id="error-message">
+        ❌ Incorrect username or password. Please try again.
+    </div>
+    <div class="success-message" id="success-message">
+        ✅ Login successful! Redirecting to dashboard...
+    </div>
+
+    <hr>
+    <div class="back-link">
+        <a href="../index.html">← Return To Home Page</a>
+    </div>
+
+    <script src="../js/admin-login.js"></script>
+</body>
+</html>

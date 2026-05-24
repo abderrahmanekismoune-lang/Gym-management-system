@@ -1,0 +1,508 @@
+
+        /* ── VARIABLES ── */
+        :root {
+            --bg-color:   #182c5c;
+            --main-color: #8607ad;
+            --sec-color:  #a368e6;
+            --card-bg:    #FFF9F0;
+            --gold:       #fbbf24;
+            --purple-lt:  #A368E6;
+            --muted:      #6b7280;
+            --dark:       #0e1628;
+            --border:     #1e3060;
+        }
+
+        
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+
+        html { font-size: 62.5%; }
+
+        body {
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        span { color: var(--gold); }
+        h3 span { color: var(--purple-lt); }
+
+        
+        nav {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            padding: 2rem 7rem;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            color: white;
+            font-weight: 800;
+            cursor: pointer;
+            letter-spacing: 0.1em;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover { transform: scale(1.05); }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .navbar a {
+            margin-left: 4rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 2px;
+        }
+
+        .btn_navbar {
+            display: inline-block;
+            padding: 0.8rem 2.4rem;
+            background: transparent;
+            color: white;
+            border: 2px solid var(--main-color) ;
+            border-radius: 2rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            margin-left: 4rem;
+            transition: all 0.4s ease;
+        }
+
+        .btn_navbar a {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            margin-left: 0 !important;
+        }
+
+        .btn_navbar:hover {
+            background-color: var(--gold);
+            border-color: var(--gold);
+            box-shadow: 0 0 18px rgba(251,191,36,0.4);
+        }
+
+        
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 8rem;
+            padding-left: 6rem;
+            padding-right: 2rem;
+             position: relative;
+              overflow: hidden;
+        }
+
+        .home::before {
+            content: 'FITNESS';
+            position: absolute;
+            top: 10%;
+            left: 28%;
+            transform: translateX(-50%);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 20rem;
+            font-weight: 900;
+            color: white;
+            opacity: 0.04;
+            z-index: 0;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .home_content {
+            flex: 1;
+            z-index: 1;
+            max-width: 580px;
+        }
+
+        .home_content h3 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .home_content h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 8rem;
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 1.2rem;
+        }
+
+        .home_content p {
+            font-size: 1.6rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.75;
+            margin-bottom: 3.2rem;
+            max-width: 480px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.4rem 3.2rem;
+            background: var(--main-color);
+            border-radius: 0.8rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 0.1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--gold);
+            box-shadow: 0 0 24px rgba(134,7,173,0.5);
+            transform: translateY(-2px);
+        }
+
+        .home_img {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            z-index: 1;
+        }
+
+        .home_img img {
+            width: 45vw;
+            max-width: 600px;
+        }
+
+        
+        .services {
+            background: var(--bg-color);
+            padding: 6rem 4rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .services h4 {
+            text-align: center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.6rem;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 3rem;
+        }
+
+        .services-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+            align-items: center;
+            justify-content: center;
+            gap: 2.4rem;
+            margin: 0 2rem;
+        }
+
+        .row {
+            background-color: var(--card-bg);
+            border-radius: 18px;
+            border: 1px solid transparent;
+            box-shadow: 0 0 10px rgba(251,191,36,0.2);
+            padding: 20px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .row img {
+            height: auto;
+            width: 100%;
+            border-radius: 14px;
+            margin-bottom: 1.4rem;
+            display: block;
+        }
+
+        .row h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #182c5c;
+            text-align: center;
+        }
+
+        .row:hover {
+            border: 3px solid var(--gold);
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 30px rgba(251,191,36,0.3);
+        }
+
+        
+        .plan {
+            padding: 6rem 4rem;
+            background-color: #111e38;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .heading {
+            text-align: center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5.5rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .plans-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+            gap: 2.4rem;
+            margin: 4rem 2rem 0;
+        }
+
+        .box {
+            padding: 32px 32px 40px;
+            background: var(--card-bg);
+            border-radius: 18px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 0 8px rgba(251,191,36,0.15);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .box h3 {
+            color: #182c5c;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .box h2 {
+            color: #182c5c;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .box ul {
+            margin-bottom: 20px;
+        }
+
+        .box ul li {
+            color: #182c5c;
+            list-style: disc;
+            font-size: 1.5rem;
+            padding-bottom: 0.8rem;
+            margin-left: 1.6rem;
+        }
+
+        .box a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--main-color);
+            color: white;
+            border-radius: 0.6rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .box a:hover { background: var(--gold);
+             color: #182c5c; }
+
+        .box:hover {
+            border: 3px solid var(--gold);
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 30px rgba(251,191,36,0.25);
+        }
+
+        
+        .memberships-section {
+            background: var(--bg-color);
+            padding: 6rem 4rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .memberships-section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            letter-spacing: 0.08em;
+            color: var(--gold);
+            margin-bottom: 2.4rem;
+        }
+
+        .memberships-section h3 {
+            font-size: 2rem;
+            margin: 2.4rem 0 1rem;
+            color: white;
+        }
+
+        .memberships-section img {
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.1);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .memberships-section p {
+            font-size: 1.6rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.6rem;
+        }
+
+        .memberships-section ul {
+            list-style: disc;
+            margin-left: 2rem;
+            margin-bottom: 2.4rem;
+        }
+
+        .memberships-section ul li {
+            font-size: 1.6rem;
+            color: rgba(255,255,255,0.7);
+            padding-bottom: 0.8rem;
+        }
+
+        .memberships-section button {
+            background: var(--gold);
+            color: #0e1628;
+            border-radius: 0.6rem;
+            padding: 1rem 2.4rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .memberships-section button:hover { background: #fde68a; }
+
+        .memberships-section button a {
+            color: #0e1628;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        
+        footer {
+            background-color: #080e1c;
+            padding: 56px 64px 28px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo {
+            display: block;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.6rem;
+            letter-spacing: 0.1em;
+            color: white;
+            margin-bottom: 1.4rem;
+        }
+
+        .footer-brand p {
+            font-size: 1.4rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.75;
+            max-width: 260px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.14em;
+            color: white;
+            margin-bottom: 1.8rem;
+        }
+
+        .footer-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 1.4rem;
+            color: rgba(255,255,255,0.45);
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover { color: var(--gold); }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 28px;
+            border-top: 1px solid var(--border);
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.35);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-socials a {
+            width: 36px;
+            height: 36px;
+            background: #152038;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: border-color 0.2s, background 0.2s, transform 0.15s;
+        }
+
+        .footer-socials a:hover {
+            border-color: var(--gold);
+            background: rgba(251,191,36,0.08);
+            transform: translateY(-2px);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            nav { padding: 1.6rem 2rem; }
+            .navbar a { margin-left: 2rem; }
+            .home { flex-direction: column; padding: 12rem 2rem 4rem; text-align: center; }
+            .home_content { max-width: 100%; }
+            .home_content h1 { font-size: 5.5rem; }
+            .home_img img { width: 80vw; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            footer { padding: 40px 24px 20px; }
+            .plan { padding: 4rem 2rem; }
+            .services { padding: 4rem 2rem; }
+            .memberships-section { padding: 4rem 2rem; }
+
+            
+        }
+        

@@ -1,0 +1,164 @@
+/* ── RESET ── */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0e1628;
+    color: #f1f5ff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* ── TITLE ── */
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.12em;
+    color: #f1f5ff;
+    margin-bottom: 8px;
+}
+
+h1 span {
+    color: #fbbf24;
+}
+
+.subtitle {
+    color: #8898b8;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #1e3060;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+/* ── FORM CARD ── */
+form {
+    background-color: #152038;
+    border: 1px solid #1e3060;
+    border-top: 3px solid #fbbf24;
+    border-radius: 12px;
+    padding: 36px;
+    width: 100%;
+    max-width: 400px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8898b8;
+    margin-top: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: #1a2845;
+    border: 1.5px solid #1e3060;
+    border-radius: 8px;
+    color: #f1f5ff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    padding: 11px 15px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #A368E6;
+    box-shadow: 0 0 0 3px rgba(163, 104, 230, 0.2);
+}
+
+input::placeholder {
+    color: #3a4f70;
+}
+
+/* ── LOGIN BUTTON ── */
+button[type="submit"] {
+    margin-top: 24px;
+    width: 100%;
+    padding: 13px;
+    background-color: #fbbf24;
+    color: #0e1628;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: #fde68a;
+    transform: translateY(-2px);
+}
+
+/* ── ERROR MESSAGE (red box) ── */
+/* hidden by default — JS shows it on wrong login */
+.error-message {
+    width: 100%;
+    max-width: 400px;
+    font-size: 13px;
+    color: #f87171;
+    background-color: rgba(248, 113, 113, 0.08);
+    border: 1px solid rgba(248, 113, 113, 0.25);
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-top: 16px;
+    display: none; /* JS changes this to block */
+}
+
+/* ── SUCCESS MESSAGE (green box) ── */
+/* hidden by default — JS shows it on correct login */
+.success-message {
+    width: 100%;
+    max-width: 400px;
+    font-size: 13px;
+    color: #4ade80;
+    background-color: rgba(74, 222, 128, 0.08);
+    border: 1px solid rgba(74, 222, 128, 0.25);
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-top: 16px;
+    display: none; /* JS changes this to block */
+}
+
+/* ── BACK LINK ── */
+.back-link {
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+.back-link a {
+    color: #8898b8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-link a:hover {
+    color: #fbbf24;
+}
